@@ -4,6 +4,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const app = express();
+// setting global configurations
+app.set('view engine','pug');
+// where to find it
+app.set('views','views');// second arg => folder
 
 const adminData = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
